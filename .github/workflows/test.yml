@@ -5,6 +5,7 @@ on: # rebuild any PRs and main branch changes
     branches:
       - main
       - 'releases/*'
+      - ldennington/begin-task
 
 jobs:
   build: # make sure build/ci work properly
@@ -19,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ldennington/begin-task
       - uses: ./
         with:
           milliseconds: 1000
