@@ -24,4 +24,4 @@ jobs:
           ref: ldennington/begin-task
       - uses: ./
         with:
-          milliseconds: 1000
+          token: ${{ secrets.WINGET_TOKEN }}
