@@ -13,7 +13,7 @@ async function run(): Promise<void> {
 
     // You can also pass in additional options as a second parameter to getOctokit
     // const octokit = github.getOctokit(myToken, {userAgent: "MyActionVersion1"});
-
+    console.log("got octokit");
     const {data: pullRequest} = await octokit.pulls.get({
       owner: 'octokit',
       repo: 'rest.js',
